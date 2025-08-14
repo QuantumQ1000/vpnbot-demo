@@ -4,16 +4,21 @@
 import telebot
 from telebot import types
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
+TOKEN = os.getenv("TOKEN")
+KEY_FILE = os.getenv("KEY_FILE")
+USED_FILE = os.getenv("USED_FILE")
+USER_DATA_FILE = os.getenv("USER_DATA_FILE")
+OWNER_ID = int(os.getenv("OWNER_ID"))
+
 import json
 from datetime import datetime, timedelta
 
 
 # === Настройки ===
-TOKEN = "8152073688:AAEl3hSiJuwxUZdK5SBdbyrNVWPzfvsEHXs"
-KEY_FILE = "/root/payments/keys_vless.txt"
-USED_FILE = "/root/payments/used_vless.txt"
-USER_DATA_FILE = "/root/user_keys.json"
-OWNER_ID = 7748974314
+
 
 bot = telebot.TeleBot(TOKEN)
 
