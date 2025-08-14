@@ -12,7 +12,8 @@ KEY_FILE = os.getenv("KEY_FILE")
 USED_FILE = os.getenv("USED_FILE")
 USER_DATA_FILE = os.getenv("USER_DATA_FILE")
 OWNER_ID = int(os.getenv("OWNER_ID"))
-
+CARD_NUMBER = os.getenv("CARD_NUMBER", "0000 0000 0000 0000")
+CARD_HOLDER = os.getenv("CARD_HOLDER", "Получатель")
 import json
 from datetime import datetime, timedelta
 
